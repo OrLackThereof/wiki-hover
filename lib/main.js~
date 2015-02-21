@@ -4,7 +4,7 @@ var contextMenu = require("sdk/context-menu");
   context: contextMenu.SelectionContext(),
   contentScript: 'self.on("click", function () {' +
                  '  var text = window.getSelection().toString();' +
-                 '  seilf.postMessage(text);' +
+                 '  self.postMessage(text);' +
                  '});',
   onMessage: function (selectionText) {
     console.log(selectionText);
