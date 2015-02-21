@@ -19,7 +19,7 @@ var contextMenu = require("sdk/context-menu");
 	width: 500,
 	height:400,
      // contentURL: data.url("http://www.en.wikipedia.org/wiki/" + selectionText + "?printable=yes"),
-contentURL: data.url("https://en.wikipedia.org/wiki/Special:Search/" + selectionText),
+contentURL: data.url("https://en.wikipedia.org/wiki/Special:Search/%s" + selectionText),
       contentScriptFile: data.url("getWikiPage.js?text=selectionText"),
 contentStyleFile: data.url("popup.css")
 });

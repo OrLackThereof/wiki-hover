@@ -1,0 +1,29 @@
+// Listen for the "show" event being sent from the
+// main add-on code. It means that the panel's about
+// to be shown.
+//
+// Set the focus to the text area so the user can
+// just start typing.
+
+self.on("message", function(addonMessage) {
+  // Handle the message
+  var content = document.createElement('div');
+  div.className = 'wiki';
+	div.innerHTML = "<iframe src=\"http://en.wikipedia.org/wiki/" + addonMessage + "?printable=yes"></iframe>
+	 document.getElementById('wikiBox').appendChild(div);
+});
+
+self.port.on("show", function onShow() {
+  //textArea.focus();
+  addContent();
+});
+
+function addContent() {
+
+  var content = document.createElement('div');
+  div.className = 'wiki';
+
+  document.getElementById('wikiBox').appendChild(div);
+}
+
+
